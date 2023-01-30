@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body class="bg-dark">
+    <div class="w-50 mx-auto text-white">
+        <h1 class="mb-5 text-center">product mangment system</h1>
+
+        <div class="form-group mb-3">
+            <label for="productName" class="mb-2">productName:</label>
+            <input type="text" id="productName" class="form-control" >
+            <p class="text-danger d-none" id="name" >Input is Error (Please check Your Input)</p>
+        </div>
+        <div class="form-group mb-3">
+            <label for="productPrice" class="mb-2">productPrice:</label>
+            <input type="number" id="productPrice" class="form-control">
+            <p class="text-danger d-none" id="Price" >Input is Error You shoud input between 1000 to 10000 (Please check Your Input)</p>
+        </div>
+        <div class="form-group mb-3">
+            <label for="productCat" class="mb-2">productCat:</label>
+            <input type="text" id="productCat" class="form-control">
+            <p class="text-danger d-none" id="valdcat" >Input is Error You shoud input (Mobile or Tv or Device) (Please check Your Input)</p>
+        </div>
+        <div class="form-group mb-3">
+            <label for="productDesc" class="mb-2">productDesc:</label>
+            <input type="text" id="productDesc" class="form-control">
+            <p class="text-danger d-none" id="valdDesc" >Input is Error (Please check Your Input)</p>
+        </div>
+        <div class="text-center d-grid">
+            <button class="btn btn-outline-primary d-grid px-5 mb-2 rounded-pill" onclick="Add()"  id="main">Submit</button>
+        </div>
+        <div class="text-center d-grid">
+            <button class="btn btn-outline-primary d-none px-5 mb-2 rounded-pill" onclick="CallUpdate()"  id="up">Update</button>
+        </div>
+        
+    </div>
+
+    <div class="w-50 mx-auto mb-5 text-white">
+        <label for="" >Search</label>
+        <input type="text" onkeyup="Search(this.value)" class="form-control">
+
+    </div>
+    <div class="w-50 mx-auto d-grid text-center mb-5 text-white">
+        <button class="btn btn-outline-danger px-5 rounded-pill " onclick="DeleteALL()" id="DeleteAll">Delete All</button>
+    </div>
+    <div class="w-50 mx-auto text-center">
+        <table class="table">
+            <thead class="text-white">
+                <th>index</th>
+                <th>productName</th>
+                <th>productPrice</th>
+                <th>productCategory</th>
+                <th>productDesc</th>
+                <th>update</th>
+                <th>delete</th>
+            </thead>
+            <tbody id="data">
+
+            </tbody>
+            
+        </table>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
